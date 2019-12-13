@@ -1,6 +1,6 @@
 <template>
   <div class="canvas-wrapper">
-    <canvas ref="canvas" height="480"></canvas>
+    <canvas ref="canvas" :width="width" :height="height"></canvas>
     <slot></slot>
   </div>
 </template>
@@ -41,8 +41,8 @@ export default {
     this.provider.context = this.$refs['canvas'].getContext('2d')
     // Resize the canvas to fit its parent's width.
     // Normally you'd use a more flexible resize system.
-    this.$refs['canvas'].width = this.$refs['canvas'].parentElement.clientWidth
-    console.log('canvas width', this.$refs['canvas'].parentElement.clientWidth)
+    // this.$refs['canvas'].width = this.$refs['canvas'].parentElement.clientWidth
+    // console.log('canvas width', this.$refs['canvas'].parentElement.clientWidth)
     // this.$refs['canvas'].height = this.$refs['canvas'].parentElement.clientHeight
   },
   methods: {
@@ -65,6 +65,6 @@ export default {
 canvas {
   background-color: lightgrey;
   border: 1px solid grey;
-  width: 100%;
+  // width: 100%;
 }
 </style>
