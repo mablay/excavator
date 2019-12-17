@@ -1,4 +1,4 @@
-# excavator
+# Inspector Binary
 
 ## Project setup
 ```
